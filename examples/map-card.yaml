@@ -1,0 +1,31 @@
+# Navimow Map Card example
+#
+# HACS frontend resource, if it is not added automatically:
+#   /hacsfiles/navimow-map-card/navimow-map-card.js
+# Resource type:
+#   JavaScript module
+#
+# Minimal setup: choose only the mower entity. The card auto-detects the
+# matching Navimow sensors if they follow the integration's normal names.
+
+type: custom:navimow-map-card
+title: Navimow Map
+mower_entity: lawn_mower.tont
+auto_entities: true
+
+# Optional: channels created by the Navimow integration.
+channel_entities:
+  - binary_sensor.tont_front_gate_channel
+
+# Optional: aerial/satellite overlay.
+overlay_image: /local/my_map.png
+overlay_opacity: 0.7
+calibration:
+  - m: [0.158, -2.748]
+    px: [374, 430]
+  - m: [-29.64, 2.812]
+    px: [208, 259]
+
+zone_names:
+  "13": Yard
+  "24": Street
