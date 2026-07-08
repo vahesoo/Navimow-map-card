@@ -1,0 +1,55 @@
+type: custom:navimow-map-card
+title: Navimow map
+mower_entity: lawn_mower.tont
+auto_entities: true
+channel_entities:
+  - binary_sensor.tont_front_gate_channel
+calibration_mode: false
+overlay_image: /local/my_map.png
+overlay_opacity: 0.7
+calibration:
+  - m: [0.158, -2.748]
+    px: [374, 430]
+  - m: [-29.64, 2.812]
+    px: [208, 259]
+trail_length: 8000
+history_hours: 96
+session_count: 24
+show_controls: true
+zone_names:
+  "13": Yard
+  "24": Street
+appearance:
+  trails:
+    active:
+      color: "#4F7942"
+      opacity: 0.5
+      width: 3.4
+    previous:
+      color: "#AFE1AF"
+      width: 3.2
+      opacity:
+        first: 0.8
+        last: 0.3
+    fade_mode: linear
+  channel:
+    fill: rgba(255,0,0,0.5)
+    stroke: rgba(255,0,0,0.5)
+    width: 0.3
+  robot:
+    scale: 1
+  dock:
+    icon: mdi:lightning-bolt-circle
+    scale: 1
+history_view:
+  enabled: true
+  days_back: 4
+  show_live_marker_when_history: false
+enable_zoom: true
+trail_legend: true
+session_filter:
+  mode: today
+  reset_time: "03:00"
+session_gap_minutes: 20
+session_interrupt_grace_minutes: 5
+straighten: true
