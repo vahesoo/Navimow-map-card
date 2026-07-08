@@ -1,5 +1,7 @@
 {
   "name": "Navimow Map Card",
+  "content_in_root": false,
   "render_readme": true,
-  "filename": "dist/navimow-map-card.js"
+  "filename": "navimow-map-card.js",
+  "homeassistant": "2023.9.0"
 }
