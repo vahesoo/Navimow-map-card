@@ -1,0 +1,16 @@
+{
+  "name": "navimow-map-card",
+  "version": "0.1.0-rc1",
+  "description": "Lovelace map card for Navimow robot mower trails and history",
+  "type": "module",
+  "scripts": {
+    "check": "node --check dist/navimow-map-card.js"
+  },
+  "keywords": [
+    "home-assistant",
+    "lovelace",
+    "navimow",
+    "robot-mower"
+  ],
+  "license": "MIT"
+}
